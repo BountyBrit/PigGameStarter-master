@@ -27,12 +27,12 @@ public class PigGameState extends GameState {
         this.player1Score = player1score;
     }
 
-    public int getCurrentPlayer() {
-        return currentPlayer;
+    public int getCurrentRunningTotal() {
+        return currentRunningTotal;
     }
 
-    public void setCurrentPlayer(int currentPlayer) {
-        this.currentPlayer = currentPlayer;
+    public void setCurrentRunningTotal(int currentPlayer) {
+        this.currentRunningTotal = currentPlayer;
     }
 
     public int getCurrentDiceValue() {
@@ -46,21 +46,21 @@ public class PigGameState extends GameState {
     private int playerTurnId;
     private int player0Score;
     private int player1Score;
-    private int currentPlayer;
+    private int currentRunningTotal;
     private int currentDiceValue;
 
    public PigGameState() {
         playerTurnId = 0;
         player0Score = 0;
         player1Score = 0;
-        currentPlayer = 0;
+        currentRunningTotal = 0;
         currentDiceValue = 1;
     }
     public PigGameState(PigGameState pgs) {
         playerTurnId = pgs.getPlayerTurnId();
         player0Score = pgs.getPlayer0Score();
         player1Score = pgs.getPlayer1Score();
-        currentPlayer = pgs.getCurrentPlayer();
+        currentRunningTotal = pgs.getCurrentRunningTotal();
         currentDiceValue = pgs.getCurrentDiceValue();
     }
 }
