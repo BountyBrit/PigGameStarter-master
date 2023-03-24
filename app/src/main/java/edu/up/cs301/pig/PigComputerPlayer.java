@@ -33,7 +33,7 @@ public class PigComputerPlayer extends GameComputerPlayer {
         PigGameState pgs = new PigGameState((PigGameState)info);
         if (pgs.getPlayerTurnId() != playerNum) {
             return;
-        }
+        } //return
         Random rnd = new Random();
         if (rnd.nextBoolean()) {
             sleep(2000);
